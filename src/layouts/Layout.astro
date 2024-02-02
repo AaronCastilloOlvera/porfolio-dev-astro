@@ -21,7 +21,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header/>
-
 		<slot />
 	</body>
 </html>
@@ -33,9 +32,9 @@ const { title } = Astro.props;
 		font-family: 'onest Variable', system-ui, sans-serif;
 	}
 	body {
-		background: #050505;
+		background: #822b2b;
 		display: flex;
-		justify-content: center;
-		height: 100vh;
+		flex-direction: column;
+		max-height: 10px;
 	} 
 </style>
