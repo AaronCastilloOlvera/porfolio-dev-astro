@@ -1,14 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro'
+import GitHubIcon from '../icons/GitHubIcon.astro'
+import SocialPill from '../icons/SocialPill.astro';
+import MailIcon from '../icons/MailIcon.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Porfolio de Aaron." description="Software Engineer con +4 años de experiancia">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
-
 			<img 
-				class="rounded-full w-12 h-12 mb-4" 
+				class="rounded-full size-12 mb-4" 
 				src="https://avatars.githubusercontent.com/u/57740438?v=4" 
 				alt="profile photo" />
 				
@@ -28,6 +31,24 @@ import Badge from '../components/Badge.astro';
 				<span class="text-red-200/90" > Otro mas de texto tiene que ir aqui</span>
 				<span class="opacity-85">Un ultimo texto para mostrar!</span>
 			</h2>
+
+		<nav class="flex gap-x-4 mt-8">
+			<SocialPill href="https://www.linkedin.com/in/aacoo/" >
+				<LinkedInIcon class="size-6"/> 
+				LikedIn
+			</SocialPill>
+			<SocialPill href="https://github.com/AaronCastilloOlvera" >
+				<GitHubIcon class="size-6"/> 
+				GitHub
+			</SocialPill>
+
+			<SocialPill href="https://github.com/AaronCastilloOlvera" >
+				<MailIcon class="size-6"/> 
+				aaroncastilloolvera@gmail.com
+			</SocialPill>
+		</nav>
+		
+		</ul>
 		</section>
 	</main>
 		
