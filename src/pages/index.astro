@@ -1,55 +1,71 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../icons/LinkedInIcon.astro'
-import GitHubIcon from '../icons/GitHubIcon.astro'
-import SocialPill from '../icons/SocialPill.astro';
-import MailIcon from '../icons/MailIcon.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import GitHubIcon from "../icons/GitHubIcon.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import BriefcaseIcon from "../icons/BriefcaseIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout title="Porfolio de Aaron." description="Software Engineer con +4 años de experiancia">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<img 
-				class="rounded-full size-12 mb-4" 
-				src="https://avatars.githubusercontent.com/u/57740438?v=4" 
-				alt="profile photo" />
-				
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hey, Soy Aaron! 
-				<a 
-					href="https://www.linkedin.com/in/aacoo/" 
-					target="_blank"	
+<Layout
+	title="Porfolio de Aaron."
+	description="Software Engineer con +4 años de experiancia"
+>
+	<main class="px-4">
+		<SectionContainer  class="py-44 pb-24" >
+			<img
+				class="rounded-full size-12 mb-4"
+				src="https://avatars.githubusercontent.com/u/57740438?v=4"
+				alt="profile photo"
+			/>
+
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, Soy Aaron!
+				<a
+					href="https://www.linkedin.com/in/aacoo/"
+					target="_blank"
 					rel="noopener"
-					class="flex justify-center items-center opacity-80 ">
+					class="flex justify-center items-center opacity-80">
 					<Badge>Software Engineer</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl text-wrap ">
-				<span> +4 años de Experiencia. </span> 
-				<span class="text-yellow-200/90"> Un poco mas de texto aqui.</span>
-				<span class="text-red-200/90" > Otro mas de texto tiene que ir aqui</span>
+			<h2 class="text-2xl text-wrap max-w-[700px]">
+				<span> +4 años de Experiencia.</span>
+				<span class="text-yellow-200/90">
+					Un poco mas de texto aqui.</span
+				>
+				<span class="text-red-200/90">
+					Otro mas de texto tiene que ir aqui</span
+				>
 				<span class="opacity-85">Un ultimo texto para mostrar!</span>
 			</h2>
 
-		<nav class="flex gap-x-4 mt-8">
-			<SocialPill href="https://www.linkedin.com/in/aacoo/" >
-				<LinkedInIcon class="size-6"/> 
-				LikedIn
-			</SocialPill>
-			<SocialPill href="https://github.com/AaronCastilloOlvera" >
-				<GitHubIcon class="size-6"/> 
-				GitHub
-			</SocialPill>
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/aacoo/">
+					<LinkedInIcon class="size-6" />
+					LikedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/AaronCastilloOlvera">
+					<GitHubIcon class="size-6" />
+					GitHub
+				</SocialPill>
 
-			<SocialPill href="https://github.com/AaronCastilloOlvera" >
-				<MailIcon class="size-6"/> 
-				aaroncastilloolvera@gmail.com
-			</SocialPill>
-		</nav>
+				<SocialPill href="mailto:aaroncastilloolvera@gmail.com">
+					<MailIcon class="size-6" />
+					aaroncastilloolvera@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
 		
-		</ul>
-		</section>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefcaseIcon size-7/>
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
-		
 </Layout>
