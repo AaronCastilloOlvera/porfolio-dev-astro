@@ -1,0 +1,57 @@
+---
+// "http://via.placeholder.com/300x200",
+
+import AstroIcon from "../icons/AstroIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import JavaScriptIcon from "../icons/JavaScriptIcon.astro";
+
+const TAGS = {
+    ASTRO: {
+        name: "Astro",
+        class: "bg-gray-800/50 text-white",
+        icon: AstroIcon
+    },
+    TAILWIND: {
+        name: "Tailwins CSS",
+        class: "bg-[#003159] text-white",
+        icon: TailwindIcon
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-[#FFD700]/20 text-white",
+        icon: JavaScriptIcon
+    }
+}
+
+const PROJECTS = [{
+    title: "Portfolio",
+    description: "lorem",
+    link: "#",
+    github: "#",
+    image: "/projects/svgl.jpg",
+    tags: [ TAGS.ASTRO, TAGS.JAVASCRIPT, TAGS.TAILWIND]
+}]
+---
+
+{
+    PROJECTS.map(p => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2" >{p.title}</h3>
+            <p class="text-lg mb-2 text-pretty " >{p.description}</p>
+            <ul class="flex gap-x-2 flex-row mb-2">
+                {
+                    p.tags.map((t) => (
+                        <span class={`flex  items-center gap-x-2 rounded-full text-xs ${t.class} py-1 px-2 `}>
+                            <t.icon class="size-4"/>
+                            <li>{t.name}</li>
+                        </span>
+                    ))
+                }
+            </ul>
+            <img 
+                class="rounded shadow-2xl shadow-white/10s"  
+                src={p.image} 
+                alt="Project Screenshot">
+        </article>
+    )) 
+}
